@@ -1,0 +1,69 @@
+@use '../styles/partials/global' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+
+.header {
+    padding: $padding-mobile;
+    &__logo-container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: $padding-mobile;
+    }
+    // &__logo {
+
+    // }
+    &__search-icon {
+        position: absolute;
+        left: 2rem;
+    }
+    &__search-bar {
+        display: flex;
+        align-items: center;
+        padding-bottom: $padding-mobile;
+    }
+    &__avatar {
+        border-radius: 50px;
+        height: 36px;
+        width: 36px;
+        margin-left: .8rem;
+    }
+    // &__button-container {
+        
+    // }
+    &__button-icon {
+        
+    }
+    &__button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: $white;
+        background-color: $blue;
+        height: 40px;
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        @include font-body-mobile;
+    }
+}
+
+#header__search {
+    display: inline-flex;
+    color: $black;
+    height: 2.25rem;
+    min-width: 15rem;
+    max-width: 100%;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: $mercury;
+    border-style: solid;
+    @include font-body-mobile;
+    outline-color: $blue;
+    padding: 12px 12px 12px 2.5rem;
+    text-align:unset;
+    &:active {
+        border-width: 2px;
+
+    }
+}
