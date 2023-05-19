@@ -30,9 +30,8 @@
     // &__button-container {
         
     // }
-    &__button-icon {
-        
-    }
+    // &__button-icon {
+    // }
     &__button {
         display: inline-flex;
         justify-content: center;
@@ -45,6 +44,9 @@
         border-radius: 4px;
         border: none;
         @include font-body-mobile;
+        &:hover {
+            background-color: $darkBlue;
+        }
     }
 }
 
