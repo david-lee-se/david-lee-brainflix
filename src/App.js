@@ -4,10 +4,11 @@ import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import ActiveVideoDetails from './components/ActiveVideoDetails/ActiveVideoDetails';
 import { useState } from 'react';
 import videoDetails from './assets/data/video-details.json';
-import videos from './assets/data/videos.json';
+
 import Comments from './components/Comments/Comments';
 import CommentForm from './components/CommentForm/CommentForm';
 import avatar from './assets/images/Mohan-muruge.jpg';
+import VideoList from './components/VideoList/VideoList';
 
 function App() {
 
@@ -23,6 +24,7 @@ const [activeVideo, setActiveVideo] = useState(videoDetails[0]);
         activeVideo={activeVideo}
         setActiveVideo={setActiveVideo}
       />
+      <VideoList activeVideo={activeVideo}/>
     </div>
   );
 }
