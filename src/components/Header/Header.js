@@ -1,8 +1,8 @@
 import './Header.scss';
-import avatar from '../assets/images/Mohan-muruge.jpg';
-import uploadIcon from '../assets/icons/upload.svg';
-import logo from '../assets/logo/BrainFlix-logo.svg';
-import searchLogo from '../assets/icons/search.svg';
+import avatar from '../../assets/images/Mohan-muruge.jpg';
+import uploadIcon from '../../assets/icons/upload.svg';
+import logo from '../../assets/logo/BrainFlix-logo.svg';
+import searchLogo from '../../assets/icons/search.svg';
 
 
 function Header() {
