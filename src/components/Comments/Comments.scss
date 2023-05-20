@@ -1,0 +1,44 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.comments {
+    padding:    $header-topPadding-mobile 
+                $padding-mobile 
+                $padding-mobile;
+    &-list {
+        list-style-type: none;
+    }
+
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    &__avatar {
+        margin-top: $padding-mobile;
+        background-color: $mercury;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+    }
+    &__text-container {
+        position: relative;
+        width: 90%;
+        padding: $padding-mobile;
+    }
+    &__name {
+        // position: relative;
+        padding-bottom: $padding-mobile ;
+        @include font-subheader-mobile;
+    }
+    &__date {
+        position: absolute;
+        right: 0;
+        top: 1rem;
+        @include font-body-mobile;
+        color: $mercury;
+    }
+    &__content {
+        @include font-body-mobile;
+    }
+}
