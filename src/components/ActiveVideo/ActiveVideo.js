@@ -1,8 +1,13 @@
+
+
 function ActiveVideo() {
+
     return (
-        <div>
-            
-        </div>
+        <article>
+            <div className="active-video-container">
+                <video posterclassName="active-video" controls ></video>
+            </div>
+        </article>
     )
 }
 
