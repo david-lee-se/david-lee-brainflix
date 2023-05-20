@@ -1,0 +1,55 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.video-details {
+    padding: 0 $padding-mobile;
+    &__title {
+        @include font-header-mobile;
+        padding-bottom: $header-bottomPadding-mobile;
+        padding-top: $header-topPadding-mobile;
+    }
+    &__social-container {
+        display: flex;
+    }
+}
+
+.social {
+        height: 100%;
+        width: 50%;
+       
+    &__date {
+        @include font-body-mobile;
+        color: $mercury;
+        padding-bottom: $padding-mobile;
+    }
+    &__author {
+        @include font-subheader-mobile;
+        padding: $padding-mobile 0;
+    } 
+    &__views {
+        display: inline-flex;
+        color: $mercury;
+        padding: $padding-mobile 0;
+        @include font-body-mobile
+    }
+    &__views-icon {
+        padding-right: .5rem;
+    }
+    &__likes {
+        display: inline-flex;
+        color: $mercury;
+        padding-bottom: $padding-mobile;
+        @include font-body-mobile;
+    }
+    &__likes-icon {
+        padding-right: .5rem;
+    }
+}
+
+.description {
+    padding-top: $padding-mobile;
+    padding-bottom: $padding-mobile;
+    @include font-body-mobile;
+    
+}
+
