@@ -2,7 +2,7 @@
 @use '../../styles/partials/mixins' as *;
 
 .comments {
-    padding:    $header-topPadding-mobile 
+    padding:    0
                 $padding-mobile 
                 $padding-mobile;
     &-list {
@@ -17,8 +17,10 @@
     &__avatar {
         margin-top: $padding-mobile;
         background-color: $mercury;
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        max-width: 36px;
+        height: 2.25rem;
+        max-height: 36px;
         border-radius: 50%;
     }
     &__text-container {
@@ -27,7 +29,6 @@
         padding: $padding-mobile;
     }
     &__name {
-        // position: relative;
         padding-bottom: $padding-mobile ;
         @include font-subheader-mobile;
     }
