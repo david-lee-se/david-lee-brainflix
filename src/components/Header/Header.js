@@ -6,7 +6,7 @@ import searchLogo from '../../assets/icons/search.svg';
 
 
 function Header(props) {
-    console.log(props.avatar)
+    
     return (
     <header className="header">
         <div className="header__logo-container">
