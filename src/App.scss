@@ -1,2 +1,17 @@
 @use './styles/partials/global' as *;
+@use './styles/partials/mixins' as *;
+@use './styles/partials/variables' as *;
 
+.list-details-container {
+    @include desktop {
+        display: flex;
+    }
+}
+
+.details-container {
+    @include desktop {
+    width: 60%;
+    padding-left: 3rem;
+    border-right: 1px solid $mercury;
+    }
+}

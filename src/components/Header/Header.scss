@@ -4,32 +4,72 @@
 
 .header {
     padding: $padding-mobile;
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $padding-tablet;
+        width: 100%;
+        height: 5.5rem;
+    }
     &__logo-container {
         display: flex;
         justify-content: center;
         padding-bottom: $padding-mobile;
+        @include tablet {
+            justify-content: flex-start;
+            padding: $padding-tablet;
+        }
     }
-    // &__logo {
+    &__search-container {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+    &__logo {
 
-    // }
+        @include tablet {
+            height: 25px;
+            width: 120px;
+        }
+
+    }
     &__search-icon {
         position: absolute;
-        left: 2rem;
+        left: 1rem;
     }
     &__search-bar {
-        display: flex;
+        display: inline-flex;
+        position: relative;
         align-items: center;
         padding-bottom: $padding-mobile;
+        width: 100%;
+        @include tablet {
+            justify-content: flex-end;
+            padding: 0;
+            margin-left: 4rem;
+            width: auto;
+        }
     }
+   
     &__avatar {
         border-radius: 50px;
         height: 36px;
         width: 36px;
         margin-left: .8rem;
+        @include tablet {
+            position: absolute;
+            left: 27rem;
+            
+        }
     }
-    // &__button-container {
-        
-    // }
+    &__button-container {
+        @include tablet {
+            margin-left: 2rem;
+        }
+    }
     &__button-icon {
         position: absolute;
         left: .5rem;
@@ -50,12 +90,19 @@
         &:hover {
             background-color: $darkBlue;
         }
+        @include tablet {
+            width: 9.375rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            margin-right: 5rem;
+            // margin-left: 2rem;
+        }
     }
 }
 
 #header__search {
     display: inline-flex;
-    color: $black;
+    color: $darkBlack;
     height: 2.25rem;
     min-width: 15rem;
     max-width: 100%;
@@ -63,6 +110,7 @@
     border-radius: 4px;
     border-color: $mercury;
     border-style: solid;
+    background-color: $alabaster;
     @include font-body-mobile;
     outline-color: $blue;
     padding: 12px 12px 12px 2.5rem;

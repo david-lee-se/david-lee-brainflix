@@ -29,22 +29,28 @@ const [activeVideo, setActiveVideo] = useState(videoDetails[0]);
     <div className="App">
       <Header avatar={avatar}/>
       <VideoPlayer activeVideo={activeVideo}/>
-      <ActiveVideoDetails 
-        videoDetails={videoDetails}
-        activeVideo={activeVideo}
-      />
-      <CommentForm avatar={avatar}/>
-      <Comments 
-        videoDetails={videoDetails}
-        activeVideo={activeVideo}
-        setActiveVideo={setActiveVideo}
-      />
-      <VideoList 
-        videoDetails={videoDetails}
-        activeVideo={activeVideo}
-        setActiveVideo={setActiveVideo}
-        selectVideo={selectVideo}
-      />
+      <div className='list-details-container'>
+        <div className='details-container'>
+          <ActiveVideoDetails 
+            videoDetails={videoDetails}
+            activeVideo={activeVideo}
+          />
+          <CommentForm avatar={avatar}/>
+          <Comments 
+            videoDetails={videoDetails}
+            activeVideo={activeVideo}
+            setActiveVideo={setActiveVideo}
+          />
+        </div>
+        <div className='list-container'>
+          <VideoList 
+            videoDetails={videoDetails}
+            activeVideo={activeVideo}
+            setActiveVideo={setActiveVideo}
+            selectVideo={selectVideo}
+          />
+        </div>
+      </div>
     </div>
   );
 }

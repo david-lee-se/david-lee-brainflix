@@ -5,12 +5,26 @@
     padding:    0
                 $padding-mobile 
                 $padding-mobile;
+    @include tablet {
+        padding:    0
+                    $padding-tablet
+                    $padding-tablet;
+    }
+    @include desktop {
+        padding:    0
+                    0
+                    $padding-tablet
+                    $padding-tablet;
+    }
     &-list {
         list-style-type: none;
     }
 
 }
 
+.divider {
+    height: 1px;
+}
 .comment {
     display: flex;
     justify-content: space-between;
@@ -22,15 +36,30 @@
         height: 2.25rem;
         max-height: 36px;
         border-radius: 50%;
+        @include tablet {
+            margin-top: $padding-tablet;
+            width: 40px;
+            max-width: 40px;
+            height: 40px;
+            max-height: 40px;
+
+        }
     }
     &__text-container {
         position: relative;
-        width: 90%;
+        width: 100%;
         padding: $padding-mobile;
+        @include tablet {
+            padding: $padding-tablet;
+        }
     }
     &__name {
         padding-bottom: $padding-mobile ;
         @include font-subheader-mobile;
+        @include tablet {
+            @include font-subheader-tablet;
+            padding-bottom: .6rem;
+        }
     }
     &__date {
         position: absolute;
@@ -38,8 +67,15 @@
         top: 1rem;
         @include font-body-mobile;
         color: $mercury;
+        @include tablet {
+            @include font-body-tablet;
+            top: 1.2rem;
+        }
     }
     &__content {
         @include font-body-mobile;
+        @include tablet {
+            @include font-body-tablet;
+        }
     }
 }

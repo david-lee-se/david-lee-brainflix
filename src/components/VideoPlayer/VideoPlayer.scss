@@ -1,6 +1,13 @@
+@use '../../styles/partials/variables' as *;
+
+.video-player-container {
+    width: 100%;
+    
+}
+
 .video-player {
-    width: 320px;
-    &-container {
-        width: 100%;
-    }
+    width: 100%;
+    height: auto;
+    max-height: 440px;
+    background-color: $darkBlack;
 }

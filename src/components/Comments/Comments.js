@@ -23,7 +23,7 @@ function Comments(props) {
                                 <p className="comment__content">{comment.comment}</p>
                                 </div>
                             </li>
-                            <hr/>
+                            <hr className='divider'/>
                         </div>
                             )
                     })

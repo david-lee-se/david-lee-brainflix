@@ -10,7 +10,7 @@ const date = new Date(props.activeVideo.timestamp).toDateString();
     return (
         <div className="video-details">
             <h1 className='video-details__title'>{props.activeVideo.title}</h1>
-            <hr className='divider'/>
+            <hr className='title-divider'/>
             <div className='video-details__social-container'>
                 <div className='social'>
                     <p className='social__author'>By {props.activeVideo.channel}</p>
