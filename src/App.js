@@ -1,56 +1,34 @@
 import Header from './components/Header/Header';
 import './App.scss';
-import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-import ActiveVideoDetails from './components/ActiveVideoDetails/ActiveVideoDetails';
-import { useState } from 'react';
-import videoDetails from './assets/data/video-details.json';
-import Comments from './components/Comments/Comments';
-import CommentForm from './components/CommentForm/CommentForm';
-import avatar from './assets/images/Mohan-muruge.jpg';
-import VideoList from './components/VideoList/VideoList';
 
+
+import { BrowserRouter, Route, Routes, NavLink} from 'react-router-dom';
+
+
+import avatar from './assets/images/Mohan-muruge.jpg';
+
+import Home from './pages/Home';
+{/* <NavLink to={`/${video.id}`}></NavLink>  */}
 function App() {
 
-const [activeVideo, setActiveVideo] = useState(videoDetails[0]);
-  
-
-  const selectVideo = (videoId) => {
-                
-                    videoDetails.map((video) => {
-                        if(video.id === videoId) {
-                          setActiveVideo(video)
-                        }else {
-                          return ""
-                        }
-                    })      
-                   }
       
   return (
     <div className="App">
+      
+      <BrowserRouter>
       <Header avatar={avatar}/>
-      <VideoPlayer activeVideo={activeVideo}/>
-      <div className='list-details-container'>
-        <div className='details-container'>
-          <ActiveVideoDetails 
-            videoDetails={videoDetails}
-            activeVideo={activeVideo}
-          />
-          <CommentForm avatar={avatar}/>
-          <Comments 
-            videoDetails={videoDetails}
-            activeVideo={activeVideo}
-            setActiveVideo={setActiveVideo}
-          />
-        </div>
-        <div className='list-container'>
-          <VideoList 
-            videoDetails={videoDetails}
-            activeVideo={activeVideo}
-            setActiveVideo={setActiveVideo}
-            selectVideo={selectVideo}
-          />
-        </div>
-      </div>
+      <Routes>
+        <Route  
+          path="/" 
+          element={<Home 
+            avatar={avatar}
+          />}
+        />
+        <Route path= "" element=""/>
+        <Route path= "/video/:videoId" element=""/>
+      </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
