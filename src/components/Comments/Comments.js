@@ -1,18 +1,19 @@
 import './Comments.scss';
 
 
+
 function Comments(props) {
 
+let comments = props.comments;
 
 
     return (
         <div className="comments">
             <hr/>
             <ul className="comments-list">
-                
-                {props.activeVideo.comments.map((comment) => {
-                    
-                    const date = new Date(comment.timestamp).toDateString();
+
+                {(!comments)? "" : comments.map((comment) => {
+                    const date =  new Date(comment.timestamp).toLocaleDateString();
                     return (
                         <div key={comment.id}>
                             <li className='comment' >

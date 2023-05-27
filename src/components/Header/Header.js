@@ -1,8 +1,8 @@
 import './Header.scss';
-
-import uploadIcon from '../../assets/icons/upload.svg';
-import logo from '../../assets/logo/BrainFlix-logo.svg';
-import searchLogo from '../../assets/icons/search.svg';
+import { Link } from 'react-router-dom';
+import uploadIcon from '../../assets/images/upload.svg';
+import logo from '../../assets/images/BrainFlix-logo.svg';
+import searchLogo from '../../assets/images/search.svg';
 
 
 function Header(props) {
@@ -10,7 +10,9 @@ function Header(props) {
     return (
     <header className="header">
         <div className="header__logo-container">
-            <img className="header__logo"  src={logo} alt="logo"/>
+            <Link to={'/'} className='header__logo-link'>
+                <img className="header__logo"  src={logo} alt="logo"/>
+            </Link>
         </div>
         <div className='header__search-container'>
         <div className="header__search-bar">

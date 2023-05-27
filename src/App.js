@@ -1,14 +1,9 @@
 import Header from './components/Header/Header';
 import './App.scss';
-
-
-import { BrowserRouter, Route, Routes, NavLink} from 'react-router-dom';
-
-
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import avatar from './assets/images/Mohan-muruge.jpg';
+import Home from './pages/Home/Home';
 
-import Home from './pages/Home';
-{/* <NavLink to={`/${video.id}`}></NavLink>  */}
 function App() {
 
       
@@ -25,7 +20,7 @@ function App() {
           />}
         />
         <Route path= "" element=""/>
-        <Route path= "/video/:videoId" element=""/>
+        <Route path="/videos/:videoId" element={<Home avatar={avatar}/>} />
       </Routes>
       </BrowserRouter>
       

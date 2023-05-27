@@ -112,6 +112,10 @@
         @include font-body-tablet;
         padding: $padding-tablet 0;
     }
-    
+    &__text {
+        @include desktop {
+            padding-right: $padding-tablet;
+        }
+    }
 }
 

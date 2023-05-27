@@ -23,7 +23,8 @@
 }
 
 .divider {
-    height: 1px;
+    
+    
 }
 .comment {
     display: flex;
@@ -70,6 +71,7 @@
         @include tablet {
             @include font-body-tablet;
             top: 1.2rem;
+            right: $padding-tablet;
         }
     }
     &__content {

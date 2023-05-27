@@ -24,6 +24,7 @@
     &__item {
         display: flex;
         height: 5rem;
+        text-decoration: none;
         @include tablet {
             width: 45%;
             margin-top: $padding-tablet;
@@ -41,9 +42,11 @@
         width: 6.5rem;
         height: 80%;
         border-radius: 4px;
+        object-fit: cover;
         @include tablet {
             width: 8rem;
             height: 90%;
+            
         }
     }
     &__details-container {

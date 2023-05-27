@@ -1,12 +1,12 @@
-import viewsIcon from '../../assets/icons/views.svg';
-import likesIcon from '../../assets/icons/likes.svg';
+import viewsIcon from '../../assets/images/views.svg';
+import likesIcon from '../../assets/images/likes.svg';
 import './ActiveVideoDetails.scss';
 
 
 function ActiveVideoDetails(props) {
 
 
-const date = new Date(props.activeVideo.timestamp).toDateString();
+const date = new Date(props.activeVideo.timestamp).toLocaleDateString();
     return (
         <div className="video-details">
             <h1 className='video-details__title'>{props.activeVideo.title}</h1>
@@ -29,7 +29,7 @@ const date = new Date(props.activeVideo.timestamp).toDateString();
             </div>
             <hr className='divider'/>
             <div className='description'>
-                <p>{props.activeVideo.description}</p>
+                <p className='description__text'>{props.activeVideo.description}</p>
             </div>
         </div>
     )
