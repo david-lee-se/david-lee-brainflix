@@ -9,7 +9,7 @@ let comments = props.comments;
 
     return (
         <div className="comments">
-            <hr/>
+            <hr className='divider'/>
             <ul className="comments-list">
 
                 {(!comments)? "" : comments.map((comment) => {
