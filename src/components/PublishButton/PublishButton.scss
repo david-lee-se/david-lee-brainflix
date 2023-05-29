@@ -36,6 +36,20 @@
     }
 }
 
+.cancel-button-container {
+    padding-top: $padding-mobile;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include tablet {
+        padding-top: none;
+        width:auto;
+        position: absolute;
+        right: 15rem;
+        top: .60rem;
+    }
+}
+
 .cancel-button {
     height: 40px;
     color: $blue;
@@ -43,7 +57,6 @@
     background-color: #fff;
     @include font-subheader-mobile;
     @include tablet {
-        position: absolute;
-        right: 15rem;
+        
     }
 }
