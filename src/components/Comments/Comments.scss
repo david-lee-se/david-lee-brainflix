@@ -48,6 +48,7 @@
         position: relative;
         width: 100%;
         padding: $padding-mobile;
+        flex: 1;
         @include tablet {
             padding: $padding-tablet;
         }

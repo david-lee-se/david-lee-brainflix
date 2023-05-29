@@ -46,7 +46,7 @@ function Home(props) {
 		getVideoDetails();
 	}, [videoId, videoList]);
 
-
+console.log(activeVideo)
 	return(
 		<>
 			<VideoPlayer activeVideo={activeVideo}/>
