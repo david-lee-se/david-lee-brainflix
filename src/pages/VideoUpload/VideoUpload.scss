@@ -12,6 +12,7 @@
         padding-right: 5.5rem;
     }
 }
+
 .video-upload-title {
     @include font-header-mobile;
     @include tablet {
@@ -22,7 +23,6 @@
         padding-bottom: $padding-tablet;
     }
 }
-
 
 .thumbnail{
     &-container {

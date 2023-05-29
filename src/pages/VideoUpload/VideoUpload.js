@@ -17,7 +17,6 @@ function VideoUpload() {
             </div>
             <PublishButton/>
         </section>
-        
     </>
     )
 }
