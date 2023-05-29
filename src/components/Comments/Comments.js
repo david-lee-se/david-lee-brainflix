@@ -11,9 +11,9 @@ let comments = props.comments;
         <div className="comments">
             <hr className='divider'/>
             <ul className="comments-list">
-
+                
                 {(!comments)? "" : comments.map((comment) => {
-                    const date =  new Date(comment.timestamp).toLocaleDateString();
+                    const date = new Date(comment.timestamp).toLocaleDateString();
                     return (
                         <div key={comment.id}>
                             <li className='comment' >
