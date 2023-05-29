@@ -6,7 +6,7 @@ function CommentForm(props) {
 
   return(
         <form className="comment-form">
-            <img className="comment-form__avatar" src={props.avatar} alt=""/>
+            <img className="comment-form__avatar" src={props.avatar} alt="avatar"/>
             <div className='comment-form__input-container'>   
                 <div className="comment-form__container">
                     <label className="comment-form__label" htmlFor="comment">JOIN THE CONVERSATION</label>

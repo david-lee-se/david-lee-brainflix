@@ -9,6 +9,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 
+
 function Home(props) {
 
 	const {videoId} = useParams();
@@ -48,28 +49,20 @@ function Home(props) {
 
 	return(
 		<>
-		<VideoPlayer 
-			activeVideo={activeVideo}
-		/>
-		<div className='list-details-container'>
-			<div className='details-container'>
-			<ActiveVideoDetails 
-				activeVideo={activeVideo}
-			/>
-			<CommentForm 
-				avatar={props.avatar}
-			/>
-			<Comments 
-				comments={comments}
-			/>
+			<VideoPlayer activeVideo={activeVideo}/>
+			<div className='list-details-container'>
+				<div className='details-container'>
+					<ActiveVideoDetails activeVideo={activeVideo}/>
+					<CommentForm avatar={props.avatar}/>
+					<Comments comments={comments}/>
+				</div>
+				<div className='list-container'>
+				<VideoList 
+					videoList ={videoList}
+					activeVideo= {activeVideo}
+				/>
+				</div>
 			</div>
-			<div className='list-container'>
-			<VideoList 
-				videoList ={videoList}
-				activeVideo= {activeVideo}
-			/>
-			</div>
-		</div>
 		</>
 	)
 }

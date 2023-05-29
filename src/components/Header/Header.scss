@@ -19,6 +19,7 @@
         @include tablet {
             justify-content: flex-start;
             padding: $padding-tablet;
+            padding-left: 0;
         }
     }
     &__search-container {
@@ -95,7 +96,6 @@
             padding-left: 2rem;
             padding-right: 2rem;
             margin-right: 5rem;
-            // margin-left: 2rem;
         }
     }
 }

@@ -5,6 +5,7 @@ import logo from '../../assets/images/BrainFlix-logo.svg';
 import searchLogo from '../../assets/images/search.svg';
 
 
+
 function Header(props) {
     
     return (
@@ -21,9 +22,12 @@ function Header(props) {
             <img className="header__avatar" src={props.avatar} alt="avatar"/>
         </div>
         <div className="header__button-container">
-            <button type= "submit" className="header__button">
-                <img className="header__button-icon" src={uploadIcon} alt="upload icon"/>
-                UPLOAD</button>
+            <Link to={'/VideoUpload'} >
+                <button type= "submit" className="header__button">
+                    <img className="header__button-icon" src={uploadIcon} alt="upload icon"/>
+                    UPLOAD
+                </button>
+            </Link>
         </div>
         </div>
     </header>
