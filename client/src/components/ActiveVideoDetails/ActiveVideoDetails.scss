@@ -1,0 +1,122 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.video-details {
+    padding: 0 $padding-mobile;
+    @include tablet {
+        padding: 0 $padding-tablet;
+    }
+    @include desktop {
+        padding:    0
+                    0
+                    0
+                    $padding-tablet;
+
+    }
+    &__title {
+        @include font-header-mobile;
+        padding-bottom: $header-bottomPadding-mobile;
+        padding-top: $header-topPadding-mobile;
+        @include tablet {
+            font-size: 2.0625rem;
+            line-height: 2.75rem;
+            font-weight: 700;
+            padding-top: $header-topPadding-tablet;
+            padding-bottom: 0;
+        }
+    }
+    &__social-container {
+        display: flex;
+        @include tablet {
+            height: 3rem;
+        }
+    }
+}
+
+.title-divider {
+    border-top: 1px solid $mercury;
+    @include tablet {
+        display: none;
+    }
+}
+.social {
+        height: 100%;
+        width: 50%;
+        @include tablet {
+            display: flex;
+            align-items: baseline;
+        }
+       
+    &__date {
+        @include font-body-mobile;
+        color: $mercury;
+        padding-bottom: $padding-mobile;
+        @include tablet {
+            @include font-body-tablet;
+            padding-top: $padding-mobile;
+            padding-left: $padding-tablet;
+        }
+    }
+    &__author {
+        @include font-subheader-mobile;
+        padding: $padding-mobile 0;
+        @include tablet {
+            @include font-subheader-tablet;
+        }
+    } 
+    &__views {
+        display: inline-flex;
+        color: $mercury;
+        padding: $padding-mobile 0;
+        @include font-body-mobile;
+        @include tablet {
+            @include font-body-tablet;
+        }
+    }
+    &__views-icon {
+        padding-right: .5rem;
+    }
+    &__likes-views-container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        @include tablet {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: flex-end;
+        }
+        @include desktop {
+            padding-right: $padding-tablet;
+        }
+    }
+    &__likes {
+        display: inline-flex;
+        color: $mercury;
+        padding-bottom: $padding-mobile;
+        @include font-body-mobile;
+        @include tablet {
+            padding-left: $padding-tablet;
+            @include font-body-tablet;
+        }
+       
+    }
+    &__likes-icon {
+        padding-right: .5rem;
+    }
+}
+
+.description {
+    padding-top: $padding-mobile;
+    padding-bottom: $padding-mobile;
+    @include font-body-mobile;
+    @include tablet {
+        @include font-body-tablet;
+        padding: $padding-tablet 0;
+    }
+    &__text {
+        @include desktop {
+            padding-right: $padding-tablet;
+        }
+    }
+}
+

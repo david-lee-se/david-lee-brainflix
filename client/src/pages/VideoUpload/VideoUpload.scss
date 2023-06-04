@@ -1,0 +1,59 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.title-container {
+    padding: $padding-mobile;
+    @include tablet {
+        border-top: 1px solid $mercury;
+        padding: $padding-tablet;
+    }@include desktop {
+        padding-left: 5.5rem;
+        padding-right: 5.5rem;
+    }
+}
+
+.video-upload-title {
+    @include font-header-mobile;
+    @include tablet {
+        font-size: 2.0625rem;
+        line-height: 2.75rem;
+        font-weight: 700;
+        border-bottom: 1px solid $mercury;
+        padding-bottom: $padding-tablet;
+    }
+}
+
+.thumbnail{
+    &-container {
+        @include tablet {
+            width: 50%;
+        }
+        @include desktop{
+        width: 40%;
+        }
+    }
+    &__label {
+        @include font-subheader-mobile;
+        color: $mercury;
+        padding-bottom: .5rem;
+        @include tablet {
+            padding-top: $padding-tablet;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        @include desktop {
+            max-width: 25.3125rem;
+        }
+    }
+}
+
+.upload-details {
+    @include desktop {
+        display: flex;
+        align-items:first baseline;
+    }
+}

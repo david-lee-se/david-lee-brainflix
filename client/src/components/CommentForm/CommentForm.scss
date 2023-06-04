@@ -1,0 +1,115 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.comment-form {
+    display: flex;
+    
+    @include tablet {
+        margin-bottom: $padding-tablet;
+        padding: 0 $padding-tablet;
+        justify-content: space-between;
+    }
+    &__avatar {
+        border-radius: 50px;
+        height: 2.25rem;
+        max-height: 36px;
+        width: 2.25rem;
+        max-width: 36px;
+        margin-left: .8rem;
+        margin-top: 2.7rem;
+        @include tablet {
+            height: 40px;
+            max-height: 40px;
+            width: 40px;
+            max-width: 40px;
+            margin-top: 2.4rem;
+            margin-right: 1rem;
+            margin-left: 0;
+        }
+    }
+    &__input-container {
+        padding-bottom: $padding-mobile;
+        width: 90%;
+        @include tablet {
+            display: flex;
+            padding-bottom: 0;
+            width: 100%;
+            
+
+        }
+    }
+    &__container {
+        height: 10rem;
+        padding: $padding-mobile;
+        @include tablet {
+            width: 100%;
+            height: 4rem;
+            padding-top: .7rem;
+            padding-left: 0;
+        }
+    }
+    &__label {
+        @include font-subheader-mobile;
+        color: $mercury;
+    }
+    &__button-container {
+        width: 95%;
+        padding-left: $padding-mobile;
+        @include tablet {
+            display: flex;
+            width: 150px;
+            align-items: flex-end;
+            padding: 0;
+            margin-left: 1rem;
+        }
+    }
+    &__button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: $white;
+        background-color: $blue;
+        height: 40px;
+        width: 100%;
+        border-radius: 4px;
+        border: none;
+        position: relative;
+        @include font-body-mobile;
+        &:hover {
+            background-color: $darkBlue;
+        }
+        @include tablet {
+            width: 150px;
+        }
+    }
+    &__button-icon {
+        position: absolute;
+        left: .5rem;
+    }
+}
+
+#comment-input {
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    color: $darkBlack;
+    height: 6rem;
+    min-width: 15rem;
+    max-width: 100%;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: $mercury;
+    border-style: solid;
+    @include font-body-mobile;
+    outline-color: $blue;
+    padding: .75rem;
+    background-color: $alabaster;
+    &:active {
+        border-width: 2px;
+    }
+    @include tablet {
+        height: 2.5rem;
+        padding: 1rem;
+    }
+}

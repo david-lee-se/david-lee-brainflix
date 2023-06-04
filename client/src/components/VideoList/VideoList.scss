@@ -1,0 +1,80 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.video-list {
+    @include font-subheader-mobile;
+    color: $mercury;
+    padding:    0
+                $padding-mobile
+                $padding-mobile;
+    @include tablet {
+        padding:    0
+                    $padding-tablet
+                    $padding-tablet;
+    }
+    &__title {
+        @include font-subheader-mobile;
+        padding-bottom: .5rem;
+        font-weight: 600;
+        @include tablet {
+            @include font-subheader-tablet;
+            padding-top: .875rem;
+        }
+    }
+    &__item {
+        display: flex;
+        height: 5rem;
+        text-decoration: none;
+        @include tablet {
+            width: 45%;
+            margin-top: $padding-tablet;
+        }
+        @include desktop {
+            width: 70%;
+        }
+    }
+    &__image-container {
+        display: flex;
+        align-items: center;
+    }
+    &__image {
+        background-color: $mercury;
+        width: 6.5rem;
+        height: 80%;
+        border-radius: 4px;
+        object-fit: cover;
+        @include tablet {
+            width: 8rem;
+            height: 90%;
+            
+        }
+    }
+    &__details-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 67%;
+        height: 90%;
+        padding-left: $padding-mobile;
+        padding-top: .25rem;
+        @include desktop {
+            width: 100%;
+        }
+    }
+    &__item-title {
+        @include font-subheader-mobile;
+        color: $darkBlack;
+        font-weight: 600;
+        @include tablet {
+            @include font-subheader-tablet;
+            font-weight: 600;
+        }
+    }
+    &__item-channel {
+        @include font-body-mobile;
+        color: $darkBlack;
+        @include tablet {
+            @include font-body-tablet;
+        }
+    }
+}
