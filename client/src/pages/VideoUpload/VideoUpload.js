@@ -1,28 +1,28 @@
-import './VideoUpload.scss';
-import publishIcon from '../../assets/images/publish.svg';
-import {useId} from 'react';
+import {useRef} from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import publishIcon from '../../assets/images/publish.svg';
+import './VideoUpload.scss';
 
-function VideoUpload() {
+function VideoUpload(props) {
 
-    const videoId= useId();
+    const setVideoList= props.setVideoList;
+    const formRef = useRef();
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        const formEl = event.target;
+        const formEl = formRef.current;
         const title = formEl.title.value;
         const description = formEl.description.value;
         const image = "http://localhost:8080/public/images/upload.jpg";
-        const id = formEl.description.id;
-        const videoObj = {title, description, image, id};
+        const videoObj = {title, description, image};
         axios.post("http://localhost:8080/videoUpload", videoObj)
             .then((result) => {
-                event.target.reset();
+                alert("Upload Successful!!")
             })
     }
     return (
     <>
-        <form onSubmit={handleSubmit} className='title-container'>
+        <form ref={formRef} className='title-container'>
             <h1 className='video-upload-title'>Upload Video</h1>
             <div className='upload-details'>
                 <div className='thumbnail-container'>
@@ -38,17 +38,17 @@ function VideoUpload() {
                         type="text" 
                         name="description" 
                         placeholder="Add a description to your video"
-                        id={videoId}>
+                    >
                     </textarea>
                 </div>
             </div>
             <div className='button-container'>
-            {/* <Link to="/" className='publish-button-container'> */}
-                <button type="submit" className='publish-button'>
-                    <img className="publish-button__icon" src={publishIcon} alt="Button Icon"/>
-                    PUBLISH
-                </button>
-            {/* </Link> */}
+                <Link to= {'/'} >
+                    <button type="submit" onClick={handleSubmit} className='publish-button'>
+                        <img className="publish-button__icon" src={publishIcon} alt="Button Icon"/>
+                        PUBLISH
+                    </button>
+                </Link>
             <div className='cancel-button-container'>
                 <button type="button" className='cancel-button'>
                     CANCEL

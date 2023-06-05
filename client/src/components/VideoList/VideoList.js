@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function VideoList(props) {
 
 
-
+    const videoList = props.videoList;
 
  
     
@@ -13,7 +13,7 @@ function VideoList(props) {
         <div className='video-list'>
             <h2 className='video-list__title'>NEXT VIDEOS</h2>
             <ul >
-                {props.videoList.map((video) => {
+                {!videoList? "": videoList.map((video) => {
                     if(props.activeVideo.id === video.id) {
                         return "";
                     }else 

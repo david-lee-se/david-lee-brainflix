@@ -11,10 +11,11 @@ import axios from 'axios';
 
 function Home(props) {
 
+	console.log(props)
 	const {videoId} = useParams();
-	const [videoList, setVideoList] = useState([]);
 	const [activeVideo, setActiveVideo] = useState({});
 	let comments = activeVideo.comments;
+	const [videoList, setVideoList] = useState([]);
 
 	useEffect(() => {
 		const getVideos = async () => {
