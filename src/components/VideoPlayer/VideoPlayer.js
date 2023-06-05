@@ -2,15 +2,12 @@ import './VideoPlayer.scss';
 
 function VideoPlayer(props) {
 
-let video=props.activeVideo.video;
 let thumbnail=props.activeVideo.image;
 
     return (
-        <article>
+        <article className='video-player-wrapper'>
             <div className="video-player-container">
-                <video poster={thumbnail} className="video-player" controls >
-                    <source src={video}/>
-                </video>
+                <video poster={thumbnail}  className="video-player" controls ></video>
             </div>
         </article>
     )

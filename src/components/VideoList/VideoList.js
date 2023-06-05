@@ -1,12 +1,10 @@
-import { useState, useEffect } from 'react';
 import './VideoList.scss';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function VideoList(props) {
 
-const api = "?api_key=127817fc-3709-4b2e-8d5d-e072e754f887";
 
+    const videoList = props.videoList;
 
  
     
@@ -15,7 +13,7 @@ const api = "?api_key=127817fc-3709-4b2e-8d5d-e072e754f887";
         <div className='video-list'>
             <h2 className='video-list__title'>NEXT VIDEOS</h2>
             <ul >
-                {props.videoList.map((video) => {
+                {videoList.map((video) => {
                     if(props.activeVideo.id === video.id) {
                         return "";
                     }else 

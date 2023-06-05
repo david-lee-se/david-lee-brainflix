@@ -1,13 +1,27 @@
 @use '../../styles/partials/variables' as *;
 
 .video-player-container {
+    position: relative;
     width: 100%;
+    height: auto;
+    padding-top: 56.25%;
     
 }
 
+.video-player-wrapper {
+    
+}
+
+
 .video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    height: auto;
-    max-height: 440px;
+    height: 100%;
+    
     background-color: $darkBlack;
 }
+

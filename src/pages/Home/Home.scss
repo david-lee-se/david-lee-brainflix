@@ -4,6 +4,10 @@
 
 
 
+.player-container {
+    height: auto;
+}
+
 .list-details-container {
     @include desktop {
         display: flex;

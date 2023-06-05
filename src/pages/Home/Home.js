@@ -11,16 +11,16 @@ import axios from 'axios';
 
 function Home(props) {
 
+	console.log(props)
 	const {videoId} = useParams();
-	const [videoList, setVideoList] = useState([]);
 	const [activeVideo, setActiveVideo] = useState({});
-	const api = "?api_key=127817fc-3709-4b2e-8d5d-e072e754f887";
 	let comments = activeVideo.comments;
+	const [videoList, setVideoList] = useState([]);
 
 	useEffect(() => {
 		const getVideos = async () => {
 		try {
-			const videoListData = await axios.get(`https://project-2-api.herokuapp.com/videos${api}`)
+			const videoListData = await axios.get(`http://localhost:8080/videos`)
 			setVideoList(videoListData.data);
 		}
 		catch (err) {
@@ -35,8 +35,8 @@ function Home(props) {
 		try {
 			const videoDetails = await axios.get(
 			!videoId
-			?`https://project-2-api.herokuapp.com/videos/${videoList[0].id}${api}`
-			:`https://project-2-api.herokuapp.com/videos/${videoId}${api}`)
+			?`http://localhost:8080/videos/${videoList[0].id}`
+			:`http://localhost:8080/videos/${videoId}`)
 			setActiveVideo(videoDetails.data);
 		}
 		catch (err) {
@@ -45,10 +45,12 @@ function Home(props) {
 		getVideoDetails();
 	}, [videoId, videoList]);
 
-console.log(activeVideo)
+
 	return(
 		<>
-			<VideoPlayer activeVideo={activeVideo}/>
+			<div className='player-container'>
+				<VideoPlayer activeVideo={activeVideo}/>
+			</div>
 			<div className='list-details-container'>
 				<div className='details-container'>
 					<ActiveVideoDetails activeVideo={activeVideo}/>
